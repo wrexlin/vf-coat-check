@@ -1,0 +1,15 @@
+[Unit]
+Description=Coat Check
+After=network.target network-online.target
+Requires=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+Environment=TG_BOT_TOKEN=
+Environment=TG_CHAT_ID=
+ExecStart=/opt/coatcheck/coatcheck --http 127.0.0.1:8080
+
+[Install]
+WantedBy=multi-user.target

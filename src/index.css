@@ -1,0 +1,51 @@
+body {
+   margin: 0;
+}
+
+.terminal-alert-success {
+   --color: rgb(1, 172, 1);
+   color: var(--color);
+   border-color: var(--color);
+}
+
+.terminal-alert-warning {
+   --color: rgb(186, 137, 0);
+   color: var(--color);
+   border-color: var(--color);
+}
+
+.color-select-box {
+   height: 3rem;
+   flex-grow: 1;
+   border: solid 3px;
+   cursor: pointer;
+}
+
+
+@keyframes loading {
+   0% {
+      width: 0%;
+   }
+
+   100% {
+      width: 100%;
+   }
+
+   0% {
+      width: 0%;
+   }
+}
+
+.progress-bar-filled.loading {
+   width: 0%;
+   animation: loading 1s;
+}
+
+.progress-bar-filled.full {
+   width: 100%;
+}
+
+.btn:disabled {
+   cursor: not-allowed;
+   opacity: 0.5;
+}
